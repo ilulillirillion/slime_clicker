@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<script src="jquery-1.12.2.js"></script>
+		<link rel="stylesheet" type="text/css" href="interface.css" />
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body>
+		<h1 id="header">Slime Clicker!</h1>
+		<button class="praybutton" onclick="prayOldClick(1)">Pray to the old gods!</button>
+		<button class="praybutton" onclick="prayNewClick(1)">Pray to the new gods!</button>
+		<button class="praybutton" onclick="praySlimeClick(1)">Pray to the slime gods!</button>
+		<br />
+		<span class="youhavetext">You have prayed to the old gods <span id="timesOldPrayed">0</span> times</span>
+		<br />
+		<span class="youhavetext">You have prayed to the new gods <span id="timesNewPrayed">0</span> times</span>
+		<br />
+		<span class="youhavetext">You have prayed to the slime gods <span id="timesSlimePrayed">0</span> times</span>
+		<br />
+		<span class="flavortext">"Seek favour from the fickle gods..."</span>
+		<br />
+		<br />
+		<button onclick="crushSlime(crushFactor)">Kill Slimes!</button>
+		<button onclick="gainCrushFactor()">Upgrade Hammer!</button>
+		Cost: <span id="crushUpgradeCost">500</span>
+		<br />
+		<span class="flavortext">"Slay them with your mighty hammer!"</span>
+		<button class="puddingCrafts" onclick="makePudding()">Make Slime Pudding</button><button class="puddingCrafts" onclick="sellPudding()">Sell Pudding</button>
+		<br />
+		<span class="youhavetext">Slimes Crushed: <span id="slimesCrushed">0</span></span>
+		<br />
+		<span class="youhavetext">Slimes per Click: <span id="crushFactor">1</span></span>
+		<br />
+		<br />
+		<button onclick="buySlimeTrap()">Buy Slime Trap</button>
+		Cost: <span id="slimeTrapCost">10</span>
+		<br />
+		<span class="flavortext">"It's like a mouse trap... But for Slimes..."</span>
+		<br />
+		<span class="youhavetext">Slime Traps: <span id="slimeTraps">0</span></span>
+		<br />
+		<br />
+		<button onclick="buySlimePress()">Buy Slime Press</button>
+		Cost: <span id="slimePressCost">45</span>
+		<br />
+		<span class="flavortext">"Kills Slimes for you! ... Albeit slowly."</span>
+		<br />
+		<span class="youhavetext">Slime Presses: <span id="slimePresses">0</span></span>
+		<br />
+		<br />
+		<button onclick="buyWorshiper()">Hire Worshiper</button>
+		Cost: <span id="worshiperCost">100</span></span>
+		<br />
+		<span class="youhavetext">Worshipers: <span id="worshipers">0</span></span>
+		<br />
+		<span class="flavortext">Test...</span>
+		<br />
+		<br />
+		<br />
+		<br />
+		<button onclick="save()">Save Game</button>
+		<button onclick="load()">Load Game</button>
+		<button id="delbutton" onclick="delsave()">DELETE SAVE</button>
+		<div id="status">
+			<h2>Slime: <span id="slime">0</span></h2>
+			<h2>Slime Pudding: <span id="slimePudding">0</span></h2>
+		</div>
+		<div id="output"></div>
+		<br />
+		<canvas width="180" height="180" id="button">
+        </canvas>
+		<br />
+		<i>Mysterious Egg!? What purpose serves this AH!?
+		<br />
+		Keep clicking to find out! One day. Maybe.</i>
+		
+		<!--slime enemy button-->
+		<button id="enemy" style="background :url(http://i.imgur.com/MpOFY9a.png)" onclick="hurtenemy(1)"></button>
+		
+		
+		<!-- Background music -->
+		<button id="player" type="button"
+			onclick="javascript:toggleSound();">
+			Background Music!
+		</button>
+		<audio id="audio">
+			<source src="firsttheme.mp3" type="audio/mpeg">
+		Your browser does not support this audio format.
+		</audio>
+
+		<script type="text/javascript">
+		function toggleSound() {
+			var audioElem = document.getElementById('audio');
+			if (audioElem.paused)
+				audioElem.play();
+			else
+				audioElem.pause();
+		}
+		</script>
+		<div id="spacetaker"></div>
+	</body>
+</html>

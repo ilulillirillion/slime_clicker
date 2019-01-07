@@ -1,0 +1,66 @@
+*{font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+body {
+    background-image: url("background0.png");
+    background-color: #cccccc;
+}
+
+#output {
+    position: fixed;
+    bottom: 30;
+    right: 0;
+}
+#status {
+    position: fixed;
+    top: 0;
+    right: 200;
+}
+
+#delbutton {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.praybutton {
+    height:25px;
+    width:120px;
+    font-size:9;
+}
+
+.flavortext {
+    font-size:9;
+    font-style: italic;
+}
+
+.youhavetext {
+    font-size:10;
+    font-weight: bold;
+}
+
+#player {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#button {
+    border: 5px solid grey;            
+}
+        
+#button.depressed {
+    border: 5px ridge grey;
+}
+ 
+#spacetaker {
+    height:107px;
+    width:100px;
+}
+ 
+#enemy {
+    position: fixed;
+    right:0px;
+    bottom:500px;
+    height: 202px;
+    width: 272px;
+}
